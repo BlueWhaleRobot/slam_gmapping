@@ -1,5 +1,5 @@
 <launch>
-    <node pkg="tf" type="static_transform_publisher" name="laserlink_broadcaster" args="0 0 0.3 3.1415926 0 0  base_link  laser 100"/>
+    <!-- <node pkg="tf" type="static_transform_publisher" name="laserlink_broadcaster" args="0 0 0.3 3.1415926 0 0  base_link  laser 100"/> -->
     <include file="$(find rplidar_ros)/launch/rplidar.launch" />
     <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
       <param name="map_update_interval" value="1.0"/>
